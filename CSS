@@ -1,0 +1,169 @@
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      padding: 20px;
+      background-image: url(images\ \(6\).jpeg); /* Ensure the correct path */
+      background-size: cover;
+      background-position: center;
+      animation: fadeInBackground 2s ease-in; /* Background fade-in animation */
+    }
+
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      background-color: rgba(233, 235, 240, 0.9); /* Slight transparency */
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 900px;
+      margin: 0 auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      opacity: 0; /* Start invisible */
+      animation: fadeIn 1s ease-in forwards; /* Fade-in animation */
+    }
+
+    .contact-info {
+      flex: 1;
+      padding: 40px;
+      background-color: #d1d9e6;
+      border-radius: 50%;
+      margin-right: 20px;
+      text-align: center;
+      animation: bounceIn 1.5s ease-in-out infinite; /* Bounce animation */
+    }
+
+    .contact-info img {
+      max-width: 100%;
+      border-radius: 50%;
+    }
+
+    .contact-form {
+      flex: 2;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      opacity: 0;
+      animation: fadeInUp 1.2s ease-in forwards; /* Fade-in from bottom */
+    }
+
+    .contact-form h2 {
+      margin-bottom: 20px;
+      color: #003366;
+    }
+
+    .input-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .input-group input {
+      width: 48%;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    }
+
+    input:focus, textarea:focus {
+      border-color: #00224f;
+      outline: none;
+      transform: scale(1.05); /* Slight scale on focus */
+      box-shadow: 0 0 10px rgba(0, 34, 79, 0.5); /* Glow effect */
+    }
+
+    button {
+      background-color: #00224f;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease; /* Smooth transition */
+    }
+
+    button:hover {
+      background-color: #003b7a;
+      transform: translateY(-3px); /* Slight lift on hover */
+      box-shadow: 0 5px 15px rgba(0, 34, 79, 0.3); /* Button shadow */
+    }
+
+    button:active {
+      transform: translateY(1px); /* Slight down on click */
+      box-shadow: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-info {
+        margin-right: 0;
+        margin-bottom: 20px;
+        max-width: 100%;
+      }
+
+      .input-group {
+        flex-direction: column;
+      }
+
+      .input-group input {
+        width: 100%;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounceIn {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-15px);
+      }
+      60% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes fadeInBackground {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
